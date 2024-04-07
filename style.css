@@ -1,0 +1,89 @@
+/* Start Global Rules  */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+/* End Global Rules  */
+
+ul {
+  display: flex;
+  gap: 3px;
+  list-style: none;
+  margin: 20px auto;
+  width: fit-content;
+  background-color: #ececec;
+}
+
+ul li {
+  padding: 8px 19px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: black;
+  color: #ececec;
+  cursor: pointer;
+  transition: .3s;
+  border-radius: 5px;
+}
+
+ul li.active {
+  box-shadow: 0 0 7px #ccc inset;
+  background-color: #555;
+}
+
+ul li:hover {
+  box-shadow: 0 0 7px #ccc inset;
+  background-color: #555;
+}
+
+.gallery {
+  max-width: 800px;
+  margin: 30px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+
+.gallery > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ececec;
+  border-radius: 5px;
+  box-shadow: 0 0 8px #777;
+  text-align: center;
+}
+
+.gallery > div.web {
+  background-color: black;
+}
+.gallery > div.gfx {
+  background-color: #999;
+}
+.gallery > div.marketing {
+  background-color: #444;
+}
+
+@media (max-width: 668px) {
+  ul li {
+    padding: 4px 10px;
+    font-size: 14px;
+  }
+  .gallery > div {
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    margin: 0 auto;
+  }
+}
